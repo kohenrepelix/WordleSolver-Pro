@@ -1,6 +1,6 @@
 # WordleSolver Pro Chrome Extension
 
-![WordleSolver Pro](extension-screenshot.png)
+![WordleSolver Pro](icon.png)
 
 ## Description
 
