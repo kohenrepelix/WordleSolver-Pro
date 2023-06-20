@@ -29,11 +29,6 @@ WordleSolver Pro is a powerful Chrome extension that enhances your Wordle solvin
 4. Click the "Solve" button to find the matching words.
 5. The results will be displayed in the popup, showing possible words or a "No matching words found" message.
 
-## Usage Limit
-
-- The extension provides 10 free uses before resetting the usage counter.
-- The usage counter will be displayed in the popup, indicating the remaining free uses.
-
 ## Contributing
 
 Contributions are welcome! If you have any suggestions, bug reports, or feature requests, please open an issue or submit a pull request.
