@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>WordleSolver Pro</title>
   <link rel="stylesheet" type="text/css" href="popup.css"/>
   <script src="popup.js"></script>
 </head>
+
 <body>
   <h1>Wordle Solver</h1>
  <label>
@@ -18,26 +20,27 @@
   <br>
   <label>
     Gray letters (comma-separated):
-    <input type="text" id="grayInput" placeholder="eg. e, h, c">
+    <input type="text" id="grayInput" placeholder="e.g. e, h, c">
   </label>
   <br>
   <label>
     Yellow letters (comma-separated):
-    <input type="text" id="yellowInput" placeholder="eg. e, h, c">
+    <input type="text" id="yellowInput" placeholder="e.g. e, h, c">
   </label>
   <br>
   <div id="greenLettersContainer">
     <label>
       Positions of the green letters (comma-separated):
-      <input type="text" id="greenPositionsInput" placeholder="eg. 1, 2, 4">
+      <input type="text" id="greenPositionsInput" placeholder="e.g. 1, 2, 4">
     </label>
     <br>
     <label>
       Green letters (comma-separated):
-      <input type="text" id="greenLettersInput" placeholder="eg. e, h, c">
+      <input type="text" id="greenLettersInput" placeholder="e.g. e, h, c">
     </label>
   </div>
   <button id="solveButton">Solve Wordle</button>
   <p id="result"></p>
 </body>
+
 </html>
