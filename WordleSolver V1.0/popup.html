@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>WordleSolver Pro</title>
+  <link rel="stylesheet" type="text/css" href="popup.css"/>
+  <script src="popup.js"></script>
+</head>
+
+<body>
+  <h1>Wordle Solver</h1>
+ <label>
+    Is there any green letters in your puzzle?
+    <select id="greenLettersSelect">
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+    </select>
+  </label>
+  <br>
+  <br>
+  <label>
+    Gray letters (comma-separated):
+    <input type="text" id="grayInput">
+  </label>
+  <br>
+  <label>
+    Yellow letters (comma-separated):
+    <input type="text" id="yellowInput">
+  </label>
+  <br>
+  <div id="greenLettersContainer">
+    <label>
+      Positions of the green letters (comma-separated):
+      <input type="text" id="greenPositionsInput">
+    </label>
+    <br>
+    <label>
+      Green letters (comma-separated):
+      <input type="text" id="greenLettersInput">
+    </label>
+  </div>
+  <button id="solveButton">Solve Wordle</button>
+  <p id="result"></p>
+</body>
+
+</html>
