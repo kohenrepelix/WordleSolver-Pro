@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>WordleSolver Pro</title>
+</head>
+<body style="width: 400px; padding: 20px; font-family: Arial, sans-serif; background-color: #f7f7f7; text-align: center; border-radius: 15px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);">
+  <img src="logoext.png" alt="Logo" id="logo" style="display: block; margin: 0 auto; width: 266px; height: 66px; margin-bottom: 20px;">
+  <label>
+    Is there any green letters in your puzzle?
+    <select id="greenLettersSelect" style="width: 100%; padding: 10px; margin-bottom: 20px; border: 2px solid #ddd; border-radius: 20px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); background-image: url('dropdown-arrow.png'); background-repeat: no-repeat; background-position: right center; background-size: 16px 16px; padding-right: 30px;">
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+    </select>
+  </label>
+  <label>
+    Gray letters (comma-separated):
+    <input type="text" id="grayInput" placeholder="e.g. e, h, c" style="width: 93%; padding: 10px; margin-bottom: 20px; border: 2px solid #ddd; border-radius: 20px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+  </label>
+  <br>
+  <label>
+    Yellow letters (comma-separated):
+    <input type="text" id="yellowInput" placeholder="e.g. e, h, c" style="width: 93%; padding: 10px; margin-bottom: 20px; border: 2px solid #ddd; border-radius: 20px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+  </label>
+  <br>
+  <div id="greenLettersContainer">
+    <label>
+      Positions of the green letters (comma-separated):
+      <input type="text" id="greenPositionsInput" placeholder="e.g. 1, 2, 4" style="width: 93%; padding: 10px; margin-bottom: 20px; border: 2px solid #ddd; border-radius: 20px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+    </label>
+    <br>
+    <label>
+      Green letters (comma-separated):
+      <input type="text" id="greenLettersInput" placeholder="e.g. e, h, c" style="width: 93%; padding: 10px; margin-bottom: 20px; border: 2px solid #ddd; border-radius: 20px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+    </label>
+  </div>
+  <button id="solveButton" style="background-color: #4CAF50; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);">Solve Wordle</button>
+  <p id="result" style="margin-top: 20px; font-weight: bold;"></p>
+
+  <script src="popup.js"></script>
+</body>
+</html>
