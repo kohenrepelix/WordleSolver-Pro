@@ -2,32 +2,99 @@
 <html>
 <head>
   <title>WordleSolver Pro</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+  <style>
+    body {
+      width: 350px;
+      padding: 20px;
+      font-family: 'Roboto', sans-serif; /* Use Roboto font */
+      background-color: #3498db;
+      text-align: center;
+      border-radius: 15px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      opacity: 0;
+      animation: fade-in 0.5s ease forwards;
+    }
+    
+    #logo {
+      display: block;
+      margin: 0 auto;
+      width: 266px;
+      height: 66px;
+      margin-bottom: 20px;
+      animation: spin 3s linear infinite;
+    }
+    
+    label {
+      color: white;
+      display: block;
+    }
+    
+    input {
+      width: 93%;
+      padding: 10px;
+      margin: 10px auto;
+      border: 2px solid #000; /* Black outline */
+      border-radius: 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      background-color: #f7f7f7;
+      font-family: 'Roboto', sans-serif; /* Use Roboto font */
+    }
+    
+    button {
+      background-color: #f7f7f7;
+      color: #3498db;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s ease;
+    }
+    
+    button:hover {
+      background-color: #3498db;
+      color: white;
+    }
+    
+    #result {
+      margin-top: 20px;
+      font-weight: bold;
+      color: white;
+    }
+  
+
+    @keyframes fade-in {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+  </style>
 </head>
-<body style="width: 400px; padding: 20px; font-family: Arial, sans-serif; background-color: #f7f7f7; text-align: center; border-radius: 15px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);">
-  <img src="logoext.png" alt="Logo" id="logo" style="display: block; margin: 0 auto; width: 266px; height: 66px; margin-bottom: 20px;">
+<body>
+  <img src="logoext.png" alt="Logo" id="logo">
   <label>
-    Gray letters (comma-separated):
-    <input type="text" id="grayInput" placeholder="e.g. e, h, c" style="width: 93%; padding: 10px; margin-bottom: 20px; border: 2px solid #ddd; border-radius: 20px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+    Gray letters (comma-separated, required):
+    <input type="text" id="grayInput" placeholder="e.g. e, h, c">
   </label>
   <br>
   <label>
-    Yellow letters (comma-separated):
-    <input type="text" id="yellowInput" placeholder="e.g. e, h, c" style="width: 93%; padding: 10px; margin-bottom: 20px; border: 2px solid #ddd; border-radius: 20px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+    Yellow letters (comma-separated, not required):
+    <input type="text" id="yellowInput" placeholder="e.g. e, h, c">
   </label>
   <br>
   <div id="greenLettersContainer">
     <label>
-      Positions of the green letters (comma-separated):
-      <input type="text" id="greenPositionsInput" placeholder="e.g. 1, 2, 4" style="width: 93%; padding: 10px; margin-bottom: 20px; border: 2px solid #ddd; border-radius: 20px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+      Positions of the green letters (comma-separated, required if green letters):
+      <input type="text" id="greenPositionsInput" placeholder="e.g. 1, 2, 4">
     </label>
     <br>
     <label>
-      Green letters (comma-separated):
-      <input type="text" id="greenLettersInput" placeholder="e.g. e, h, c" style="width: 93%; padding: 10px; margin-bottom: 20px; border: 2px solid #ddd; border-radius: 20px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+      Green letters (comma-separated, not required, IN ORDER OF THE WORDLE PUZZLE):
+      <input type="text" id="greenLettersInput" placeholder="e.g. e, h, c">
     </label>
   </div>
-  <button id="solveButton" style="background-color: #4CAF50; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);">Solve Wordle</button>
-  <p id="result" style="margin-top: 20px; font-weight: bold;"></p>
+  <button id="solveButton">Solve Wordle</button>
+  <p id="result"></p>
 
   <script src="popup.js"></script>
 </body>
